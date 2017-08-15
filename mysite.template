@@ -4,8 +4,8 @@ server {
     #charset koi8-r;
     #access_log  /var/log/nginx/host.access.log  main;
 
-    location /testpath/ {
-        rewrite ^/testpath(.*)$ /$1 last;
+    location /${SERVICE_PATH}/ {
+        rewrite ^/${SERVICE_PATH}/(.*)$ /$1 last;
     }
 
     location / {
